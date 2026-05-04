@@ -112,6 +112,11 @@ INDEX.HTML
                 Criei esse site para guardar minhas experiências com cada leitura de um jeito mais pessoal e criativo.
             </p>
 
+            <div class="progress-area">
+
+
+</div>
+
         </div>
 
     </div>
@@ -149,6 +154,18 @@ INDEX.HTML
             <p>
                 O livro acompanha Samuel, um garoto que vai para o sertão em busca de respostas sobre sua família. Durante a viagem, ele acaba vivendo dentro da cabeça de uma estátua de santo abandonada.
             </p>
+
+            <br><br>
+
+                <div class="progress-text">
+                progresso da leitura • 56%
+                </div>
+
+            <div class="progress-bar">
+
+            <div class="progress-fill"></div>
+
+    </div>
 
             <div class="button">
                 abrir diário →
@@ -608,6 +625,42 @@ h1{
     color:#6e5964;
 }
 
+.progress-area{
+    margin-top:30px;
+}
+
+.progress-text{
+    margin-bottom:10px;
+
+    color:#b57f96;
+
+    font-size:.9rem;
+}
+
+.progress-bar{
+    width:100%;
+    height:12px;
+
+    border-radius:999px;
+
+    background:#f6d9e6;
+
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:56%;
+    height:100%;
+
+    background:linear-gradient(
+    90deg,
+    #e8a7c3,
+    #d58cab
+    );
+
+    border-radius:999px;
+}
+
 .button{
     margin-top:28px;
 
@@ -719,6 +772,22 @@ footer{
         right:20px;
     }
 
+}
+
+body::before{
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:url("https://www.transparenttextures.com/patterns/noise.png");
+
+    opacity:.035;
+
+    pointer-events:none;
+
+    z-index:9999;
 }
 
 </style>
