@@ -1,0 +1,727 @@
+<!-- =========================
+INDEX.HTML
+========================= -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Meu Diário de Leitura</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <div class="logo">
+        Reading diary ♡
+    </div>
+
+    <nav class="menu">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre mim</a>
+        <a href="#livros">Livros</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+    <div class="floating-heart">♡</div>
+    <div class="floating-heart two">♡</div>
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <div class="small-text">
+                meu cantinho literário
+            </div>
+
+            <h1>
+                Diário<br>
+                de leitura
+            </h1>
+
+            <p>
+                Esse site foi criado para um projeto da matéria de Língua Portuguesa e funciona como um diário virtual das minhas leituras.
+                <br><br>
+                Aqui eu vou registrar pensamentos, sentimentos, partes marcantes e minhas opiniões sobre cada livro lido durante o ano.
+            </p>
+
+        </div>
+
+        <div class="hero-box">
+
+            <div class="paper">
+
+                <div class="paper-title">
+                    Lendo atualmente ♡
+                </div>
+
+                <img src="ACabecaDoSanto.webp" alt="A Cabeça do Santo">
+
+                <h3>
+                    A Cabeça do Santo
+                </h3>
+
+                <span>
+                    Socorro Acioli
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SOBRE -->
+
+<section class="about" id="sobre">
+
+    <div class="about-card">
+
+        <div class="about-title">
+            sobre mim
+        </div>
+
+        <img src="eu.jpg" alt="Maria Júlia">
+
+        <div class="about-text">
+
+            <h2>
+                Oi! ♡
+            </h2>
+
+            <p>
+                Me chamo Maria Júlia, tenho 17 anos e sou estudante do ensino médio no IFRN.
+                <br><br>
+                Desde criança, a leitura sempre foi algo de que gostei muito, principalmente porque gosto de conhecer novas histórias, personagens e diferentes formas de enxergar o mundo.
+                <br><br>
+                Criei esse site para guardar minhas experiências com cada leitura de um jeito mais pessoal e criativo.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LIVROS -->
+
+<section class="books" id="livros">
+
+    <div class="section-top">
+
+        <span>livros</span>
+
+        <h2>
+            Leituras atuais
+        </h2>
+
+    </div>
+
+    <a href="cabeca-do-santo.html" class="book-card">
+
+        <img src="ACabecaDoSanto.webp" alt="A Cabeça do Santo">
+
+        <div class="book-info">
+
+            <h3>
+                A Cabeça do Santo
+            </h3>
+
+            <div class="author">
+                — Socorro Acioli
+            </div>
+
+            <p>
+                O livro acompanha Samuel, um garoto que vai para o sertão em busca de respostas sobre sua família. Durante a viagem, ele acaba vivendo dentro da cabeça de uma estátua de santo abandonada.
+            </p>
+
+            <div class="button">
+                abrir diário →
+            </div>
+
+        </div>
+
+    </a>
+
+</section>
+
+<footer>
+    Feito por Maria Júlia ♡
+</footer>
+
+<!-- BOTÃO VOLTAR AO TOPO -->
+<button id="topButton">
+    ↑
+</button>
+
+<script>
+
+const topButton = document.getElementById("topButton");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 300){
+
+        topButton.classList.add("show");
+
+    } else {
+
+        topButton.classList.remove("show");
+
+    }
+
+});
+
+topButton.addEventListener("click", () => {
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});
+
+</script>
+
+<style>
+
+html{
+    scroll-behavior:smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:
+    radial-gradient(circle at top left, #ffeaf3 0%, transparent 25%),
+    radial-gradient(circle at bottom right, #ffdceb 0%, transparent 25%),
+    #fff9fc;
+
+    font-family:'Inter', sans-serif;
+    color:#5f4652;
+
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+
+    padding:28px 8%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    z-index:1000;
+
+    background:rgba(255,255,255,.5);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,.5);
+}
+
+.logo{
+    font-family:'Playfair Display', serif;
+    font-size:1.4rem;
+
+    color:#cb6f98;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+}
+
+.menu a{
+    text-decoration:none;
+
+    color:#9b7085;
+
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#cb6f98;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    padding:140px 8% 100px;
+
+    display:flex;
+    align-items:center;
+
+    position:relative;
+}
+
+.hero-content{
+    width:100%;
+    max-width:1200px;
+
+    display:grid;
+    grid-template-columns:1fr 420px;
+
+    gap:80px;
+    align-items:center;
+}
+
+.small-text{
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.8rem;
+
+    color:#d68cad;
+
+    margin-bottom:20px;
+}
+
+h1{
+    font-family:'Playfair Display', serif;
+
+    font-size:5.5rem;
+
+    line-height:.95;
+
+    color:#7a4c61;
+
+    margin-bottom:30px;
+}
+
+.hero-text p{
+    line-height:2;
+
+    color:#765f6a;
+
+    max-width:620px;
+}
+
+/* PAPER */
+
+.hero-box{
+    display:flex;
+    justify-content:center;
+}
+
+.paper{
+    width:100%;
+
+    background:
+    linear-gradient(rgba(255,255,255,.85), rgba(255,255,255,.85)),
+    linear-gradient(rgba(223,185,206,.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(223,185,206,.15) 1px, transparent 1px);
+
+    background-size:
+    100% 100%,
+    28px 28px,
+    28px 28px;
+
+    border-radius:35px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,.8);
+
+    box-shadow:0 15px 40px rgba(227,177,200,.15);
+
+    text-align:center;
+
+    transform:rotate(2deg);
+}
+
+.paper-title{
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.75rem;
+
+    color:#d48ba9;
+
+    margin-bottom:25px;
+}
+
+.paper img{
+    width:220px;
+
+    border-radius:22px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 15px 30px rgba(219,158,187,.18);
+}
+
+.paper h3{
+    font-family:'Playfair Display', serif;
+
+    font-size:2.3rem;
+
+    color:#7a4c61;
+
+    margin-bottom:10px;
+}
+
+.paper span{
+    color:#b27a92;
+}
+
+/* FLOATING HEARTS */
+
+.floating-heart{
+    position:absolute;
+
+    font-size:5rem;
+
+    color:#ffd0e3;
+
+    top:160px;
+    right:80px;
+
+    opacity:.6;
+}
+
+.floating-heart.two{
+    font-size:3rem;
+
+    top:520px;
+    right:300px;
+}
+
+/* ABOUT */
+
+.about{
+    padding:0 8% 120px;
+}
+
+.about-card{
+    background:rgba(255,255,255,.72);
+
+    border-radius:40px;
+
+    padding:35px;
+
+    display:grid;
+    grid-template-columns:240px 1fr;
+
+    gap:40px;
+
+    align-items:start;
+
+    position:relative;
+
+    border:1px solid rgba(255,255,255,.8);
+
+    box-shadow:0 15px 35px rgba(225,173,198,.12);
+
+    overflow:hidden;
+}
+
+.about-card::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+    linear-gradient(rgba(223,185,206,.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(223,185,206,.12) 1px, transparent 1px);
+
+    background-size:28px 28px;
+
+    pointer-events:none;
+}
+
+.about-title{
+    position:absolute;
+
+    top:25px;
+    left:35px;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.75rem;
+
+    color:#d58cab;
+
+    z-index:2;
+}
+
+.about-card img{
+    width:100%;
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:28px;
+
+    position:relative;
+    z-index:2;
+
+    margin-top:25px;
+}
+
+.about-text{
+    position:relative;
+    z-index:2;
+
+    margin-top:25px;
+}
+
+.about-text h2{
+    font-family:'Playfair Display', serif;
+
+    font-size:3rem;
+
+    color:#7a4c61;
+
+    margin-bottom:20px;
+}
+
+.about-text p{
+    line-height:2;
+
+    color:#725d67;
+}
+
+/* BOOKS */
+
+.books{
+    padding:0 8% 120px;
+}
+
+.section-top{
+    margin-bottom:45px;
+}
+
+.section-top span{
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.8rem;
+
+    color:#d58cab;
+}
+
+.section-top h2{
+    font-family:'Playfair Display', serif;
+
+    font-size:3rem;
+
+    color:#7a4c61;
+
+    margin-top:10px;
+}
+
+.book-card{
+    background:rgba(255,255,255,.72);
+
+    border-radius:35px;
+
+    padding:28px;
+
+    display:grid;
+    grid-template-columns:240px 1fr;
+
+    gap:40px;
+
+    text-decoration:none;
+    color:inherit;
+
+    border:1px solid rgba(255,255,255,.8);
+
+    box-shadow:0 15px 35px rgba(229,167,194,.15);
+
+    transition:.4s;
+}
+
+.book-card:hover{
+    transform:translateY(-6px);
+}
+
+.book-card img{
+    width:100%;
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+}
+
+.book-info{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.book-info h3{
+    font-family:'Playfair Display', serif;
+
+    font-size:3rem;
+
+    color:#7a4c61;
+
+    margin-bottom:10px;
+}
+
+.author{
+    color:#c987a6;
+
+    margin-bottom:20px;
+}
+
+.book-info p{
+    line-height:2;
+
+    color:#6e5964;
+}
+
+.button{
+    margin-top:28px;
+
+    width:fit-content;
+
+    padding:14px 26px;
+
+    border-radius:999px;
+
+    background:#f9d8e7;
+
+    color:#8c5b71;
+
+    font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+    padding:45px;
+
+    text-align:center;
+
+    color:#be8aa0;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:950px){
+
+    .hero-content,
+    .about-card,
+    .book-card{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:4rem;
+    }
+
+    .menu{
+        display:none;
+    }
+
+    .paper{
+        transform:none;
+    }
+
+    .floating-heart{
+        display:none;
+    }
+
+}
+
+/* BOTÃO TOPO */
+
+#topButton{
+    position:fixed;
+
+    bottom:30px;
+    right:30px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(249,216,231,.95);
+
+    color:#8c5b71;
+
+    font-size:1.4rem;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(219, 159, 187, .25);
+
+    backdrop-filter:blur(10px);
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:.35s;
+
+    z-index:999;
+}
+
+#topButton:hover{
+    transform:translateY(-4px);
+}
+
+#topButton.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+@media(max-width:700px){
+
+    #topButton{
+        width:50px;
+        height:50px;
+
+        bottom:20px;
+        right:20px;
+    }
+
+}
+
+</style>
+
+</body>
+</html>
